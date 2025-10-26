@@ -1,0 +1,31 @@
+logging:
+  level:
+    root: ${LEVEL_LOG}
+spring:
+  application:
+    name: skye-portfolio-backend
+  r2dbc:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    pool:
+      initial-size: 5
+      max-size: 20
+      max-idle-time: 30m
+  sql:
+    init:
+      mode: always
+  mail:
+    host: smtp.mailgun.org
+    port: 587
+    username: ${MAILGUN_DOMAIN}
+    password: ${MAILGUN_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  port: ${PORT}
+  address: ${ADDRESS}
