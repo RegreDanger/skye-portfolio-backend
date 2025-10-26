@@ -27,7 +27,7 @@ spring:
           starttls:
             enable: true
 server:
-  port: ${PORT:8080}
+  port: ${PORT}
   address: ${ADDRESS}
 
 rate-limit:
