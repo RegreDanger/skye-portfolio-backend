@@ -8,15 +8,15 @@ import org.springframework.validation.annotation.Validated;
 import com.networkroom.skye_portfolio_backend.email.api.dto.ContactRequest;
 import com.networkroom.skye_portfolio_backend.kernel.mappers.SimpleMailMessageMapper;
 
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
 @Service
 @Validated
-@Data
 @Slf4j
+@RequiredArgsConstructor
 public class MailService {
 
 	@Value("${ICLOUD_SKYE_EMAIL}")

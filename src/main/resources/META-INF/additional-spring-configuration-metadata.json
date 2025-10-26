@@ -1,0 +1,51 @@
+{
+  "properties": [
+    {
+      "name": "rate-limit.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Enable or disable rate limiting"
+    },
+    {
+      "name": "rate-limit.whitelist-ips",
+      "type": "java.util.List<java.lang.String>",
+      "description": "List of client IPs to exclude from rate limiting"
+    },
+    {
+      "name": "rate-limit.header-prefix",
+      "type": "java.lang.String",
+      "defaultValue": "X-RateLimit",
+      "description": "Prefix used for rate limit headers"
+    },
+    {
+      "name": "rate-limit.capacity",
+      "type": "java.lang.Integer",
+      "defaultValue": 10,
+      "description": "Number of tokens (capacity) in the token bucket"
+    },
+    {
+      "name": "rate-limit.refill-tokens",
+      "type": "java.lang.Integer",
+      "defaultValue": 10,
+      "description": "Number of tokens added on each refill interval"
+    },
+    {
+      "name": "rate-limit.refill-duration-minutes",
+      "type": "java.lang.Long",
+      "defaultValue": 1,
+      "description": "Refill interval in minutes"
+    },
+    {
+      "name": "rate-limit.cache-max-size",
+      "type": "java.lang.Long",
+      "defaultValue": 10000,
+      "description": "Maximum number of buckets to keep in the cache"
+    },
+    {
+      "name": "rate-limit.cache-expire-hours",
+      "type": "java.lang.Long",
+      "defaultValue": 1,
+      "description": "Cache expiry time in hours for idle buckets"
+    }
+  ]
+}

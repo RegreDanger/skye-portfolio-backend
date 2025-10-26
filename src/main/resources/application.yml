@@ -29,3 +29,12 @@ spring:
 server:
   port: ${PORT}
   address: ${ADDRESS}
+
+rate-limit:
+  enabled: true
+  capacity: 10
+  refill-tokens: 10
+  refill-duration-minutes: 1
+  cache-max-size: 100
+  cache-expire-hours: 1
+  header-prefix: X-RateLimit
