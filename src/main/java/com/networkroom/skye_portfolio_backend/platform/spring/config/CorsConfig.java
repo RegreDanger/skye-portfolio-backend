@@ -18,7 +18,7 @@ public class CorsConfig {
 		CorsConfiguration contactConfig = new CorsConfiguration();
 
 		contactConfig.setAllowedOrigins(List.of(
-			"https://luvrksnsnskyedev.neocities.org"
+			"https://luvrksnsnskyedev.space"
 		));
 		
 		contactConfig.setAllowedMethods(List.of("POST", "OPTIONS"));
