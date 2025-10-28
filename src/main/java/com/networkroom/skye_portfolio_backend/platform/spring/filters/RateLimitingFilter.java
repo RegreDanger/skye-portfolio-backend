@@ -1,4 +1,4 @@
-package com.networkroom.skye_portfolio_backend.platform.filters;
+package com.networkroom.skye_portfolio_backend.platform.spring.filters;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;

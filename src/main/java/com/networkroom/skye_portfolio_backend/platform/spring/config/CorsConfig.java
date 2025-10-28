@@ -1,4 +1,4 @@
-package com.networkroom.skye_portfolio_backend.platform.config;
+package com.networkroom.skye_portfolio_backend.platform.spring.config;
 
 import java.util.List;
 

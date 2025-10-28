@@ -15,17 +15,6 @@ spring:
   sql:
     init:
       mode: always
-  mail:
-    host: smtp.mailgun.org
-    port: 587
-    username: ${MAILGUN_DOMAIN}
-    password: ${MAILGUN_PASSWORD}
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
 server:
   port: ${PORT}
   address: ${ADDRESS}
@@ -38,3 +27,8 @@ rate-limit:
   cache-max-size: 100
   cache-expire-hours: 1
   header-prefix: X-RateLimit
+
+mailgun:
+  domain: ${MAILGUN_DOMAIN}
+  api-key:  ${API_MAILGUN_KEY}
+  from-email: ${ICLOUD_SKYE_EMAIL}

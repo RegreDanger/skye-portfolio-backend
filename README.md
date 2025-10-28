@@ -26,7 +26,7 @@ I did this with so much love, I hope this improve your website experience! Sweet
 - 🌱 **Spring Boot 3** (WebFlux, Security, R2DBC)  
 - ⚛️ **Project Reactor** (Reactive Programming)  
 - 🧠 **Neon Tech** (Serverless PostgreSQL)  
-- 📬 **JavaMailSender** (Mailgun SMTP integration)  
+- 📬 **Mailgun Java SDK** (Mailgun SDK Integration)
 - 🛡️ **Bucket4j** (Rate limiting with token bucket algorithm)
 - 🔄 **MapStruct** (DTO mapping)  
 - 🐋 **Docker**  
@@ -48,8 +48,8 @@ To run the app (locally with Docker or in production on Render), you **must** pr
 | `DB_PASSWORD` | `(secret)` | The database password. |
 | `ICLOUD_SKYE_EMAIL` | `skyemail` | Destination email address (Skye's inbox). |
 | `MAILGUN_DOMAIN` | `usernamemailing@sandbox0d2d...` | Mailgun domain/SMTP username. |
-| `MAILGUN_PASSWORD` | `(secret)` | Mailgun SMTP password. |
-| `PORT` | `8080` | Port on which the app will run. |
+| `API_MAILGUN_KEY` | `(secret)` | The API KEY for domain access. |
+| `PORT` | `---` | Port on which the app will run. Don't use in production because RENDER provides one |
 | `ADDRESS` | `0.0.0.0` | Bind address (use `0.0.0.0` in containers). |
 | `API_KEY_BACKEND` | `testkey` | Secret API key for the `X-CLIENT-KEY` header. |
 | `LEVEL_LOG` | `DEBUG` | Log level (`DEBUG`, `INFO`, `WARN`). |
@@ -209,7 +209,7 @@ The next major feature is to implement a **robust retry mechanism** using the da
    Create a `failed_emails` table in Neon to store messages that fail to send.  
 
 2. **Update Error Handling:**  
-   Modify the `MailService`'s `onErrorResume` block — instead of just logging errors, it should store failed messages in the database.  
+   Modify the `MailService`'s `onErrorResume` block — instead of just logging errors, it should store failed messages in the database.
 
 3. **Implement Scheduler:**  
    Add a new `@Scheduled` method (`EmailRetryScheduler`) to run periodically (e.g., every hour).  
