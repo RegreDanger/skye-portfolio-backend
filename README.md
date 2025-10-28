@@ -13,7 +13,7 @@ I did this with so much love, I hope this improve your website experience! Sweet
 - 🔒 **Secure API Endpoint:** A single `POST /api/contact` endpoint for all contact form submissions.  
 - 🔑 **API Key Authentication:** Protected by a custom `ApiKeyAuthFilter`, requiring a secret `X-CLIENT-KEY` header.  
 - 🚦 **Intelligent Rate Limiting:** IP-based rate limiting with configurable buckets, automatic token refill, and informative headers.
-- 🌐 **Strict CORS Policy:** Only accepts requests from `luvrksnsnskyedev.space`, blocking all other origins.  
+- 🌐 **Strict CORS Policy:** Only accepts requests from `skye's site`, blocking all other origins.  
 - ⚡ **Reactive & Asynchronous:** Built with **Spring WebFlux** (Project Reactor) for a non-blocking, high-performance architecture.  
 - 🐳 **Container-Ready:** Includes a multi-stage `Dockerfile` for a small, secure, and efficient production image.  
 - 🧩 **Centralized Configuration:** Uses a single `application.yml` populated by environment variables, following the **12-Factor App** methodology.  
